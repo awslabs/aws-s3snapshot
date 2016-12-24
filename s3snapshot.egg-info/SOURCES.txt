@@ -1,0 +1,12 @@
+README
+lambda_handler.py
+setup.py
+s3snapshot/__init__.py
+s3snapshot/cli.py
+s3snapshot/s3snapshot.py
+s3snapshot.egg-info/PKG-INFO
+s3snapshot.egg-info/SOURCES.txt
+s3snapshot.egg-info/dependency_links.txt
+s3snapshot.egg-info/entry_points.txt
+s3snapshot.egg-info/requires.txt
+s3snapshot.egg-info/top_level.txt

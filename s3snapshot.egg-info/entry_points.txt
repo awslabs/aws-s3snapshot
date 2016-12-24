@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        s3snapshot=s3snapshot.cli:cli
+    
