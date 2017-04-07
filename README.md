@@ -22,7 +22,7 @@ Or extract the package and run:
 
 
 ## Lambda Function
-If you want to build the package from the source you need to run the build.sh script.
+If you want to build the package from the source you need to run the `build.sh` script.
 This script will copy all source packages from $VIRTUAL_ENV/lib/python2.7/site-packages to the zip file.
 To run the script you just need to copy the s3snapshot-X.Y.Z.zip to a S3 bucket or upload directly to your lambda function
 

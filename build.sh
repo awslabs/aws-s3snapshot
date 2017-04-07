@@ -54,7 +54,7 @@ zip -r9 $zip_file *
 echo "Adding site-packages to the zip file"
 tmp_folder=$(pwd)
 cd $VIRTUAL_ENV/lib/python2.7/site-packages/
-zip -r9 $tmp_folder${zip_file#.} *
+zip -r9 $tmp_folder${zip_file#.} * -x "*boto3*" -x "*botocore*" -x "*pip*" -x "*s3transfer*"
 cd $tmp_folder
 
 echo "Moving zip file to dist folder"
