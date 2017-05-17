@@ -2,30 +2,20 @@
 #
 # s3backup.py
 #
-# Copyright 2015 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+# Copyright 2017 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 #
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
+# Licensed under the Amazon Software License (the "License").
+# You may not use this file except in compliance with the License.
+# A copy of the License is located at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
+#    http://aws.amazon.com/asl/
 #
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+# or in the "license" file accompanying this file.
+# This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+# express or implied.
+# See the License for the specific language governing permissions and limitations under the License.
 #
-####################################################################################
-# Any code, applications, scripts, templates, proofs of concept, documentation     #
-# and other items provided by AWS under this SOW are “AWS Content,” as defined     #
-# in the Agreement, and are provided for illustration purposes only. All such      #
-# AWS Content is provided solely at the option of AWS, and is subject to the terms #
-# of the Addendum and the Agreement. Customer is solely responsible for using,     #
-# deploying, testing, and supporting any code and applications provided by AWS     #
-# under this SOW.                                  #
-####################################################################################
-# Backup script to copy files to S3
+"""Backup script to copy files to S3"""
 
 from __future__ import print_function
 

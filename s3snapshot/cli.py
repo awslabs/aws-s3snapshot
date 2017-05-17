@@ -2,21 +2,20 @@
 #
 # cli.py
 #
-# Copyright 2015 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+# Copyright 2017 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 #
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
+# Licensed under the Amazon Software License (the "License").
+# You may not use this file except in compliance with the License.
+# A copy of the License is located at
 #
-#     http://www.apache.org/licenses/LICENSE-2.0
+#    http://aws.amazon.com/asl/
 #
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+# or in the "license" file accompanying this file.
+# This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+# express or implied.
+# See the License for the specific language governing permissions and limitations under the License.
 #
-''' Backup script to copy files to S3 '''
+""" Backup script to copy files to S3 """
 
 from __future__ import print_function
 
@@ -52,10 +51,9 @@ sys.setdefaultencoding('utf8')
 @click.option('-f', '--filter', metavar='FILTER', help=('Filter list to snapshot.\n'
                                                         'ex: --filter \'{"instances": ["i-12345678", "i-abcdef12"], "tags": {"tag:Owner": "John", "tag:Name": "PROD"}}\''''))
 @click.option('--verbose', is_flag=True, default=VERBOSE, help='Show extra information during execution')
-@click.option('-v', '--version', is_flag=True, default=False, help='Display version number and exit.')
-# Main function for CLI interation
+@click.version_option()
+# Main function for CLI iteration
 def cli(*args, **kwargs):
-    version = kwargs.pop('version')
     filter_args = kwargs.pop('filter')
     label = kwargs.pop('label')
     sns_arn = kwargs.pop('sns_arn') or SNS_ARN
@@ -81,9 +79,6 @@ def cli(*args, **kwargs):
 
     click.echo('ECTP Snapshot to S3 - Version {0}'.format(VERSION))
     click.echo('')
-
-    if version:
-        return
 
     if event['stop'] and event['stopped']:
         click.echo('[!] Unable to process. You need to choose --stop or --stopped option')

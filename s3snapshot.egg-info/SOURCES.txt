@@ -1,4 +1,3 @@
-README
 lambda_handler.py
 setup.py
 s3snapshot/__init__.py
